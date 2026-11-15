@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience Guide outputs for ICT, Agriculture and Fishery Arts, and Family and Consumer Science.">
+    <title>Experience Guide Outputs</title>
+    <!-- Modern Font Option (Inter) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <style>
+        /* Base Styling & Background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            line-height: 1.6;
+            background-image: url('https://imagepaste.org/i/34mksdtm.jpg');
+            background-size: cover;
+            background-position: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: Relative;
+            overflow-x: hidden;
+        }
+
+        /* Swimming Fish Container & Animation */
+        .aquarium-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .swimming-fish {
+            position: absolute;
+            top: 25%;
+            width: 80px;
+            height: auto;
+            animation: swimAcross 12s linear infinite;
+        }
+
+        @keyframes swimAcross {
+            0% {
+                right: -120px;
+                left: auto !important;
+                transform: translateY(0px) !important; 
+            }
+            25% {
+                transform: translateY(-10px) !important;
+            }
+            50% {
+                transform: translateY(15px) !important;
+            }
+            75% {
+                transform: translateY(-5px) !important;
+            }
+            100% {
+                right: calc(100vw + 120px);
+                left: auto !important;
+            }
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 850px; 
+            margin: 40px auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header Styling - Clear Navy Blue Tint */
+        .site-header {
+            text-align: center;
+            color: #ffffff;
+            background: rgba(15, 48, 102, 0.50); 
+            padding: 30px 20px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(147, 197, 253, 0.35);
+        }
+
+        .site-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .site-header p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #e0f2fe;
+        }
+
+        /* Main Card Container - Light Navy Blue Glass */
+        .guide-card {
+            background: rgba(18, 56, 118, 0.28);
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid rgba(147, 197, 253, 0.32);
+            color: #ffffff;
+        }
+
+        .guide-card header h2 {
+            color: #ffffff;
+            margin-top: 0;
+            font-size: 1.8rem;
+            border-bottom: 1px solid rgba(147, 197, 253, 0.35);
+            padding-bottom: 10px;
+        }
+
+        .guide-card header p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        /* Section Layout Boxes - Translucent Navy Blue */
+        .section-block {
+            background-color: rgba(15, 48, 102, 0.44) !important; 
+            border-left: 4px solid #60a5fa !important; /* Soft navy-sky accent line */
+            border-top: 1px solid rgba(147, 197, 253, 0.32);
+            border-right: 1px solid rgba(147, 197, 253, 0.2);
+            border-bottom: 1px solid rgba(147, 197, 253, 0.2);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        /* Clean, Flat, Readable White Text (No Glow) */
+        .section-block h3,
+        .section-block h4,
+        .section-block p,
+        .section-block li,
+        .section-block span,
+        .section-block div,
+        .section-block strong,
+        .section-block b {
+            color: #ffffff !important;
+            text-shadow: none !important;
+        }
+
+        .section-block h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .section-block p {
+            margin-bottom: 0;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        /* Large Individual Diagram Display */
+        .diagram-showcase-container {
+            margin-top: 20px;
+        }
+
+        /* Diagram Cards - Translucent Navy Blue */
+        .diagram-card {
+            background: rgba(15, 48, 102, 0.42);
+            border: 1px solid rgba(147, 197, 253, 0.32);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 30px; 
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .diagram-card h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #ffffff !important;
+            text-shadow: none !important;
+            font-size: 1.15rem;
+            border-bottom: 1px solid rgba(147, 197, 253, 0.32);
+            padding-bottom: 8px;
+        }
+
+        .diagram-card img {
+            width: 100%; 
+            height: auto;
+            max-height: 550px; 
+            object-fit: contain;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .site-footer {
+            text-align: center;
+            color: #ffffff;
+            background: rgba(15, 48, 102, 0.50);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(147, 197, 253, 0.32);
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Layer containing the animated swimming fish -->
+    <div class="aquarium-container">
+        <svg class="swimming-fish" xmlns="http://w3.org" viewBox="0 0 100 60">
+            <path d="M70 30 L95 12 L90 30 L95 48 Z" fill="#ff7043" />
+            <path d="M40 18 Q55 2 65 15 Z" fill="#ffa726" />
+            <ellipse cx="45" cy="30" rx="28" ry="16" fill="#ffb74d" />
+            <path d="M42 14 Q38 30 42 46" fill="none" stroke="#fff" stroke-width="4" />
+            <path d="M54 15 Q50 30 54 45" fill="none" stroke="#fff" stroke-width="4" />
+            <circle cx="28" cy="26" r="3" fill="#000" />
+            <circle cx="27" cy="25" r="1" fill="#fff" />
+            <path d="M40 34 Q35 44 45 40 Z" fill="#ff7043" />
+        </svg>
+    </div>
+
+    <!-- Main Content Layer -->
+    <div class="container">
+        <header class="site-header">
+            <h1>LifeLabs IPBA</h1>
+            <p>Grade 8-1 | Group 4 Chocomucho</p>
+        </header>
+
+        <main>
+            <article class="guide-card">
+                
+                <!-- 1. Selected focus problem -->
+                <div class="section-block">
+                    <h3>Selected focus problem</h3>
+                    <p>Dynamite Fishing (AFA)</p>
+                </div>
+
+                <!-- 2. Root cause analysis findings -->
+                <div class="section-block">
+                    <h3>Root cause analysis findings</h3>
+                    
+                    <div class="diagram-showcase-container">
+                        
+                        <!-- First Image Layout Box -->
+                        <div class="diagram-card">
+                            <h4>Fish bone diagram</h4>
+                            <img src="https://img.sanishtech.com/u/6f9a05630e4ab8a0daed9a69be172139.jpg" alt="RCA Framework">
+                            <p style="text-align: left; margin-top: 15px; color: #222; font-weight: 500;">
+                                <!-- DITO MO IPAPASTE YUNG EXPLANATION NG PIC 1 --> The findings for the fish bone diagram is that dynamite fishing is caused by access to explosives and for quick income. People use it because it can catch many fish in a short time. Additionally, bad governance, weak law enforcement, and the absence of strict penalties allow this unlawful practice to continue. 
+                            </p>
+                        </div>
+
+                        <!-- Second Image Layout Box -->
+                        <div class="diagram-card">
+                            <h4> Mind map</h4></h4>
+                            <img src="https://img.sanishtech.com/u/976c93a8dcff8d5ec5cf6914a991ae13.jpg" alt="RCA Tool 2">
+                            <p style="text-align: left; margin-top: 15px; color: #222; font-weight: 500;">
+                                <!-- DITO MO IPAPASTE YUNG EXPLANATION NG PIC 2 --> 
+The findings for mindmap shows that dynamite fishing started in the late 1800s and sooner or later spread worldwide. Local fishermen used it because it was a faster way to catch more fish, but it’s illegal because it uses explosives to stun or kill fish and it also destroys their habitat. This has even affected areas like Thitu island in the West Philippine Sea. 
+
+
+                            </p>
+                        </div>
+
+                        <!-- Third Image Layout Box -->
+                        <div class="diagram-card">
+                            <h4>5 Whys</h4>
+                            <img src="https://img.sanishtech.com/u/6e5a0243140bf9858bce8dc71806a174.jpg" alt="RCA Tool 3">
+                            <p style="text-align: left; margin-top: 15px; color: #222; font-weight: 500;">
+                                <!-- DITO MO IPAPASTE YUNG EXPLANATION NG PIC 3 --> The findings for 5 Whys is that fishermen turn to dynamite fishing because traditional fishing is too slow and catches are dropping, while access to explosives make it feel like a quick and easy catch. So, this makes them focus on making money rather than worrying about the damage done to the environment.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+          
+                <!-- 3. Proposed solution -->
+                <div class="section-block">
+                    <h3>Proposed solution</h3> Our proposed solution is a social media poster/infographic awareness post, that warns about the effects and the causes of dynamite fishing. This solution can help lessen the amount of dynamite fishing operators and making them aware and alerted of the damage they are doing to the environment.
+</p>
+</div>
+   
+                <!-- 3. Proposed solution -->
+                <div class="section-block">
+                    <h3>Research findings</h3> Dynamite fishing causes serious damage to coral reefs and makes it harder for them to recover. Coral reefs with uneven coral growth are more easily harmed by explosives. The study also explains that dynamite fishing slows down the recovery of damaged corals and makes them less able to recover from natural damage. It shows how harmful using explosives for fishing is to marine life and the ocean.  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"e3c1c9af36de41759418005494a48906","r":1,"spa":2}' crossorigin="anonymous"></script>
